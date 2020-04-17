@@ -1,15 +1,3 @@
 <template>
-    <div>
-        <h1>Event Create</h1>
-    </div>
+  <h1>Create Event</h1>
 </template>
-
-<script>
-    export default {
-        name: "EventCreate"
-    }
-</script>
-
-<style scoped>
-
-</style>
