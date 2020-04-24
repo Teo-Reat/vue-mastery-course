@@ -20,10 +20,21 @@ export default new Vuex.Store({
             { id: 3, text: 'Planks travel on hunger at port degas!', done: false },
             { id: 4, text: 'Damn yer gull, feed the mate.', done: true },
             { id: 5, text: 'Rob me mate, ye old sail.', done: true },
-        ]
+        ],
+        count: 0
     },
-    mutations: {},
-    actions: {},
+    mutations: {
+        INCREMENT_COUNT(state, value) {
+            state.count += +value
+        }
+    },
+    actions: {
+        updateCount({ state, commit }, value) {
+            if (state.user) {
+                commit('INCREMENT_COUNT', value)
+            }
+        }
+    },
     getters: {
         categoriesLength: state => {
             return state.categories.length
